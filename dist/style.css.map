@@ -1,0 +1,1 @@
+{"version":3,"sources":["style.scss"],"names":[],"mappings":"AAAA,KACI,qBAAsB,CACtB,cAAe,CAGnB,iBACI,kBAAmB,CAGvB,KACI,wBAA2B,CAC3B,SAAU","file":"style.css","sourcesContent":["html {\r\n    box-sizing: border-box;\r\n    font-size: 100%;\r\n}\r\n\r\n*, *:before, *:after {\r\n    box-sizing: inherit;\r\n}\r\n\r\nbody {\r\n    background-color: lightgray;\r\n    color: red;\r\n}"]}
