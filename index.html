@@ -6,11 +6,30 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pomodoro Clock</title>
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice&display=swap" rel="stylesheet">
     <!-- CSS File-->
-    <link rel="stylesheet" href="dist/style.css?cb=1561374043403" />
+    <link rel="stylesheet" href="dist/style.css?cb=1561384182230" />
 </head>
 <body>
-    <h1>Work in progress</h1>
-    <script src="dist/all.js?cb=1561374043403"></script>
+    <div class="top__bar"></div>
+    <section class="clock">
+        <div class="clock__timer">00:00</div>
+        <div class="clock__settings">
+            <div data-time="20" class="clock__settings__slider">
+                <div class="cursor"></div>
+            </div>
+            <div class="clock__settings__minutes">20 min</div>
+        </div>
+        <div class="clock__btns">
+            <button class="btn"><span class="text">START</span></button>
+            <button class="btn"><span class="text">RESET</span></button>
+        </div>
+    </section>
+    <div class="logo">
+        <img class="logo__img"src="./img/pomodoro.png" />
+    </div>
+
+    <script src="dist/all.js?cb=1561384182230"></script>
 </body>
 </html>
