@@ -61,6 +61,7 @@ function timer(seconds) {
         const secondsLeft = Math.round((then - Date.now()) / 1000);
         // check if we should stop it
         if(secondsLeft < 0) {
+            endSound();
             clearInterval(countdown);
             isRunning = false;
             return;
@@ -92,22 +93,24 @@ function resetCountDown() {
 }
 
 function addMinute() {
-    resetCountDown();
     minutes ++;
     mins.textContent = minutes + ' min';
-
 
     const minutesPerc = Math.round(minutes / 60 * 100) + '%';
     timeBar.setAttribute('style', 'width: ' + minutesPerc);
 }
 
 function deductMinute() {
-    resetCountDown();
     minutes --;
     mins.textContent = minutes + ' min';
 
     const minutesPerc = Math.round(minutes / 60 * 100) + '%';
     timeBar.setAttribute('style', 'width: ' + minutesPerc);
+}
+
+function endSound() {
+    const audio = new Audio('../to-the-point.mp3');
+    audio.play();
 }
 // Events Listeners
 
@@ -120,3 +123,5 @@ resetBtn.addEventListener('click', resetCountDown)
 
 arrowUp.addEventListener('click', addMinute);
 arrowDown.addEventListener('click', deductMinute);
+
+
