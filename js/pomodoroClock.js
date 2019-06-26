@@ -7,10 +7,12 @@ const clock = document.querySelector('.clock__timer');
 
 const startBtn = document.querySelector('#start');
 const resetBtn = document.querySelector('#reset');
+const arrowUp = document.querySelector('#arrow__up');
+const arrowDown = document.querySelector('#arrow__down');
 
 // Setting the timer
 let isMouseDown = false;
-const timeWidth = 500;
+const timeWidth = time.getAttribute('width');
 let minutes = parseInt(mins.textContent);
 let isRunning = false;
 
@@ -63,7 +65,7 @@ function timer(seconds) {
             isRunning = false;
             return;
         }
-        console.log(secondsLeft);
+        //console.log(secondsLeft);
         // display
         displayTimeLeft(secondsLeft);
     }, 1000);
@@ -88,6 +90,25 @@ function resetCountDown() {
     }
 
 }
+
+function addMinute() {
+    resetCountDown();
+    minutes ++;
+    mins.textContent = minutes + ' min';
+
+
+    const minutesPerc = Math.round(minutes / 60 * 100) + '%';
+    timeBar.setAttribute('style', 'width: ' + minutesPerc);
+}
+
+function deductMinute() {
+    resetCountDown();
+    minutes --;
+    mins.textContent = minutes + ' min';
+
+    const minutesPerc = Math.round(minutes / 60 * 100) + '%';
+    timeBar.setAttribute('style', 'width: ' + minutesPerc);
+}
 // Events Listeners
 
 time.addEventListener('mousemove', chooseTime);
@@ -97,3 +118,5 @@ window.addEventListener('mouseup', mouseUp);
 startBtn.addEventListener('click', startTimer);
 resetBtn.addEventListener('click', resetCountDown)
 
+arrowUp.addEventListener('click', addMinute);
+arrowDown.addEventListener('click', deductMinute);

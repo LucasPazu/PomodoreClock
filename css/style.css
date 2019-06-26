@@ -42,9 +42,12 @@ body {
     font-size: 140px;
     margin-bottom: 20px;
     font-family: 'Spicy Rice', cursive; }
+    @media (max-width: 800px) {
+      .clock__timer {
+        font-size: 100px; } }
   .clock__settings {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
     .clock__settings .time {
@@ -57,6 +60,9 @@ body {
       border-radius: 50px;
       box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
       overflow: hidden; }
+      @media (max-width: 800px) {
+        .clock__settings .time {
+          width: 250px; } }
       .clock__settings .time__bar {
         height: 100%;
         width: 33.3%;
@@ -72,6 +78,27 @@ body {
       margin-left: 40px;
       font-size: 50px;
       font-family: 'Spicy Rice', cursive; }
+      @media (max-width: 800px) {
+        .clock__settings .minutes {
+          margin-bottom: 30px; } }
+    .clock__settings .arrows {
+      width: 70px;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      margin-bottom: 20px; }
+    .clock__settings .arrow {
+      width: 25px;
+      height: 25px;
+      cursor: pointer; }
+      @media (max-width: 800px) {
+        .clock__settings .arrow {
+          width: 50px;
+          height: 50px;
+          font-size: 50px; } }
   .clock__btns {
     width: 200px;
     display: flex;
