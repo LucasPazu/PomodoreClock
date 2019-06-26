@@ -1,31 +1,17 @@
 {
-  "name": "pomodoreclock",
+  "name": "pomodoro_clock",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LucasPazu/PomodoreClock.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LucasPazu/PomodoreClock/issues"
-  },
-  "homepage": "https://github.com/LucasPazu/PomodoreClock#readme",
   "devDependencies": {
-    "autoprefixer": "^9.6.0",
-    "cssnano": "^4.1.10",
+    "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-replace": "^1.0.0",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.5",
-    "gulp-uglify": "^3.0.2"
+    "gulp-sass": "^4.0.2"
   }
 }

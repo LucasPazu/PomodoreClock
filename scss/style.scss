@@ -58,20 +58,31 @@ body {
         justify-content: center;
         align-items: center;
 
-        &__slider {
+        .time {
             width: 500px;
-            height: 10px;
-            background-color:(71, 156, 71);
- 
-            .cursor {
-                width: 25px;
-                height: 25px;
-                border-radius: 50%;
-                background-color:red
+            height: 25px;
+            background: #efefef;
+            display: flex;
+            align-items: flex-start;
+            margin: 10px;
+            border-radius: 50px;
+            box-shadow: 0 0 1px 3px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+
+            &__bar {
+                height: 100%;
+                width: 33.3%;
+                background: linear-gradient(-170deg, #68bd7d 0%, #08d374 100%);
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 2px;
+                color: white;
             }
+
         }
 
-        &__minutes {
+        .minutes {
             width: 200px;
             height: 60px;
             margin-left: 40px;
